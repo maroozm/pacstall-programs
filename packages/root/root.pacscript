@@ -26,8 +26,9 @@ postinst() {
       _shell= echo $SHELL
       if [[ ${_shell} -eq bash ]]; then
         echo "source $HOME/.local/root/bin/thisroot.sh"
-      else if [[ ${_shell} -eq zsh ]]; then
+      elif [[ ${_shell} -eq zsh ]]; then
         echo "source $HOME/.local/root/bin/thisroot.zsh"
-      else if [[ ${_shell} -eq fish ]]; then
+      elif [[ ${_shell} -eq fish ]]; then
         echo "source $HOME/.local/root/bin/thisroot.fish"
+      fi
 }
