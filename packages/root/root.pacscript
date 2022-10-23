@@ -7,9 +7,9 @@ maintainer="Salman <salman.khurshid.malik@cern.ch>"
 _ubuntuver=$(grep "VERSION_ID=" /etc/os-release | grep -o "[0-9]*" | tr -d '[:space:]')
 if [[ ${_ubuntuver} -ge 2010 ]]; then
   url="https://root.cern/download/root_v6.26.06.Linux-ubuntu18-x86_64-gcc7.5.tar.gz"
-else if [[ ${_ubuntuver} -lt 2010 ][ ${_ubuntuver} -ge 2004 ]]; then
+else if [[ ${_ubuntuver} -lt 2010 && ${_ubuntuver} -ge 2004 ]]; then
   url="https://root.cern/download/root_v6.26.06.Linux-ubuntu20-x86_64-gcc7.5.tar.gz"
-else if [[ ${_ubuntuver} -lt 2004 ][ ${_ubuntuver} -ge 1804 ]]; then
+else if [[ ${_ubuntuver} -lt 2004 && ${_ubuntuver} -ge 1804 ]]; then
   url="https://root.cern/download/root_v6.26.06.Linux-ubuntu18-x86_64-gcc7.5.tar.gz"
 fi
 
